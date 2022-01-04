@@ -1,0 +1,10 @@
+@extends('layouts.backend.system.show', ['status' => 'true'])
+@push('title', '%%crudNameCap%%')
+
+@push('content-body')
+<div class="table-responsive">
+  <table width="100%" class="table table-bordered table-hover table-checkable" id="exilednoname">%%formBodyHtmlForShowView%%
+    @include('includes.partial.datatable.show')
+  </table>
+</div>
+@endpush

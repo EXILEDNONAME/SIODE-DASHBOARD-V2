@@ -1,0 +1,12 @@
+@extends('layouts.backend.system.index', ['status' => 'true', 'daterange' => 'true'])
+@push('title', '%%crudNameCap%%')
+
+@push('content-head')
+<th> Date Start </th>
+<th> Date End </th>
+%%formHeadingHtml%%@endpush
+
+@push('content-body')
+{ data: 'date_start', searchable: false, width: 1, className: 'text-nowrap' },
+{ data: 'date_end', searchable: false, width: 1, className: 'text-nowrap' },
+%%formBodyHtml%%@endpush
