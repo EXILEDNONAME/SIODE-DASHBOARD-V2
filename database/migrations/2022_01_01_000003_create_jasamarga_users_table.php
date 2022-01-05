@@ -8,8 +8,8 @@ class CreateJasamargaUsersTable extends Migration {
   public function up() {
     Schema::create('jasamarga_users', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('division');
-      $table->string('device');
+      $table->integer('id_device')->unsigned();
+      $table->integer('id_division')->unsigned();
       $table->string('name');
       $table->string('npp');
       $table->string('mac_address');
@@ -27,6 +27,8 @@ class CreateJasamargaUsersTable extends Migration {
       $table->integer('status')->default(1);
       $table->integer('created_by')->nullable()->default('0');
       $table->integer('updated_by')->nullable()->default('0');
+      $table->foreign('id_device')->references('id')->on('jasamarga_devices')->onDelete('restrict')->onUpdate('restrict');
+      $table->foreign('id_division')->references('id')->on('jasamarga_divisions')->onDelete('restrict')->onUpdate('restrict');
       $table->timestamps();
     });
   }
