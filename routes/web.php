@@ -26,3 +26,6 @@ Route::get('/lang/{language}', 'LocalizationController@switch')->name('localizat
 require __DIR__.'/backend/system/general.php';
 require __DIR__.'/backend/system/dummy.php';
 require __DIR__.'/backend/system/management.php';
+
+// MAIN
+require __DIR__.'/backend/main/jasamarga.php';
