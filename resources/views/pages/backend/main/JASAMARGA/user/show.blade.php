@@ -1,5 +1,5 @@
 @extends('layouts.backend.system.show', ['status' => 'true'])
-@push('title', 'JASAMARGA Devices')
+@push('title', 'JASAMARGA Users')
 
 @push('content-body')
 <div class="table-responsive">

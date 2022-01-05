@@ -1,5 +1,5 @@
 @extends('layouts.backend.system.edit')
-@push('title', 'JASAMARGA Devices')
+@push('title', 'JASAMARGA Divisions')
 
 @push('content-body')
 <form method="POST" id="form-exilednoname" action="{{ URL::current() }}/../../{{ $data->id }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">

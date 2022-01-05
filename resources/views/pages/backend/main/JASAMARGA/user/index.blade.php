@@ -1,5 +1,5 @@
 @extends('layouts.backend.system.index')
-@push('title', 'JASAMARGA Devices')
+@push('title', 'JASAMARGA Users')
 
 @push('content-head')
 <th> Name </th>

@@ -10,13 +10,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Spatie\Activitylog\Models\Activity;
 
-use App\Http\Requests\Backend\Main\JASAMARGA\Device\StoreRequest;
-use App\Http\Requests\Backend\Main\JASAMARGA\Device\UpdateRequest;
+use App\Http\Requests\Backend\Main\JASAMARGA\User\StoreRequest;
+use App\Http\Requests\Backend\Main\JASAMARGA\User\UpdateRequest;
 
 use Notification;
 use App\Notifications\DataStoreNotification;
 
-class DeviceController extends Controller {
+class UserController extends Controller {
 
   /**
   **************************************************
@@ -27,9 +27,9 @@ class DeviceController extends Controller {
 
   public function __construct() {
     $this->middleware('auth');
-    $this->url = '/dashboard/jasamarga/devices';
-    $this->path = 'pages.backend.main.jasamarga.device';
-    $this->model = 'App\Models\Backend\Main\Jasamarga\Device';
+    $this->url = '/dashboard/jasamarga/users';
+    $this->path = 'pages.backend.main.jasamarga.user';
+    $this->model = 'App\Models\Backend\Main\Jasamarga\User';
     $this->data = $this->model::get();
   }
 

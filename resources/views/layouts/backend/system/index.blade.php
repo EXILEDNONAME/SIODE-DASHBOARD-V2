@@ -145,7 +145,6 @@
                 <th class="no-export"> Status </th>
                 @endif
                 @stack('content-head')
-                <th class="no-export"> Sort </th>
                 <th class="no-export"> Active </th>
                 <th class="no-export"> </th>
               </tr>
@@ -300,7 +299,6 @@ var KTDatatablesExtensionsKeytable = function() {
         },
         @endif
         @stack('content-body')
-        { data: 'sort', 'className': 'align-middle text-center', 'width': '1', },
         {
           data: 'active', orderable: true, 'className': 'align-middle text-center', 'width': '1',
           render: function ( data, type, row ) {

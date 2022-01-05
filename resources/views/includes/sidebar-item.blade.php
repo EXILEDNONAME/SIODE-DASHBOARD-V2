@@ -3,7 +3,7 @@
   <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 </li>
 
-<li class="menu-item menu-item-submenu {{ (request()->is('dashboard/dummy*')) ? 'menu-item-open' : '' }}">
+<li class="menu-item menu-item-submenu {{ (request()->is('dashboard/jasamarga*')) ? 'menu-item-open' : '' }}">
   <a href="javascript:;" class="menu-link menu-toggle">
     <i class="menu-icon fas fa-list"></i>
     <span class="menu-text"> JASAMARGA </span>
@@ -16,6 +16,12 @@
         <a href="/dashboard/jasamarga/devices" class="menu-link">
           <i class="menu-bullet menu-bullet-line"><span></span></i>
           <span class="menu-text"> Devices </span>
+        </a>
+      </li>
+      <li class="menu-item {{ (request()->is('dashboard/jasamarga/divisions*')) ? 'menu-item-active' : '' }}">
+        <a href="/dashboard/jasamarga/divisions" class="menu-link">
+          <i class="menu-bullet menu-bullet-line"><span></span></i>
+          <span class="menu-text"> Divisions </span>
         </a>
       </li>
       <li class="menu-item {{ (request()->is('dashboard/jasamarga/users*')) ? 'menu-item-active' : '' }}">
