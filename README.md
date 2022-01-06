@@ -1,5 +1,6 @@
 - X - Page Not Found [EDIT]
-- Edit Count & Refresh Notification
+- Edit Count & Refresh Notification Ajax Pusher
+- Mark as Read Link Ajax Pusher
 
 - [CHECK] * Create Multiple Middleware
 - [CHECK] * Page Documentation

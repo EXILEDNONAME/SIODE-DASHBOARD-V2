@@ -12,6 +12,8 @@ Route::get('test-pusher', function () {
     return "Event has been sent!";
 });
 
+// DUMMY - TABLE GENERALS
+Route::get('/dashboard/notification/read/{id}', 'Backend\DashboardController@notification_read')->name('enable');
 Route::get('/send-notification', [NotificationController::class, 'sendOfferNotification']);
 
 
