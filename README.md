@@ -1,4 +1,5 @@
 - X - Page Not Found [EDIT]
+- Edit Count & Refresh Notification
 
 - [CHECK] * Create Multiple Middleware
 - [CHECK] * Page Documentation
