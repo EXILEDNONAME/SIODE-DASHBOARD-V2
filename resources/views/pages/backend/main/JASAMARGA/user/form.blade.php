@@ -55,6 +55,22 @@
 </div>
 
 <div class="form-group row">
+  <label class="col-lg-3 col-form-label"> Printer </label>
+  <div class="col-lg-9">
+    {{ Form::select('printer', ['1' => 'Yes', '2' => 'No'], (isset($data->printer) ? $data->printer : '2'), ['class' => $errors->has('printer') ? 'form-control is-invalid' : 'form-control', 'required' => 'required']) }}
+    @error('printer') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-lg-3 col-form-label"> Connection </label>
+  <div class="col-lg-9">
+    {{ Form::select('connection', ['1' => 'WLAN', '2' => 'LAN'], (isset($data->connection) ? $data->connection : '2'), ['class' => $errors->has('connection') ? 'form-control is-invalid' : 'form-control', 'required' => 'required']) }}
+    @error('connection') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
+  </div>
+</div>
+
+<div class="form-group row">
   <label class="col-lg-3 col-form-label"> Spec OS </label>
   <div class="col-lg-9">
     {!! Form::text('specification_os', (isset($data->specification_os) ? $data->specification_os : ''), ['class' => $errors->has('specification_os') ? 'form-control is-invalid' : 'form-control']) !!}
@@ -87,25 +103,9 @@
 </div>
 
 <div class="form-group row">
-  <label class="col-lg-3 col-form-label"> Printer </label>
-  <div class="col-lg-9">
-    {{ Form::select('printer', ['1' => 'Yes', '2' => 'No'], (isset($data->printer) ? $data->printer : '1'), ['class' => $errors->has('printer') ? 'form-control is-invalid' : 'form-control', 'required' => 'required']) }}
-    @error('printer') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
-  </div>
-</div>
-
-<div class="form-group row">
-  <label class="col-lg-3 col-form-label"> Connection </label>
-  <div class="col-lg-9">
-    {{ Form::select('connection', ['1' => 'WLAN', '2' => 'LAN'], (isset($data->connection) ? $data->connection : '1'), ['class' => $errors->has('connection') ? 'form-control is-invalid' : 'form-control', 'required' => 'required']) }}
-    @error('connection') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
-  </div>
-</div>
-
-<div class="form-group row">
   <label class="col-lg-3 col-form-label"> Description </label>
   <div class="col-lg-9">
-    {!! Form::textarea('description', (isset($data->description) ? $data->description : ''), [ 'id' => 'kt-tinymce-1', 'class' => $errors->has('description') ? 'form-control is-invalid' : 'form-control']) !!}
+    {!! Form::textarea('description', (isset($data->description) ? $data->description : ''), ['class' => $errors->has('description') ? 'form-control is-invalid' : 'form-control']) !!}
     @error('description') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
   </div>
 </div>

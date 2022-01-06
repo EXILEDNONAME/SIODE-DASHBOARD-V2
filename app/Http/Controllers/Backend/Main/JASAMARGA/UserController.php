@@ -43,6 +43,8 @@ class UserController extends Controller {
     $model = $this->model;
     if(request()->ajax()) {
       return DataTables::of($this->data)
+      ->editColumn('id_devices', function($order) { return $order->jasamarga_devices->name; })
+      ->editColumn('id_divisions', function($order) { return $order->jasamarga_divisions->name; })
       ->rawColumns(['description'])
       ->addIndexColumn()
       ->make(true);
@@ -80,11 +82,12 @@ class UserController extends Controller {
   **************************************************
   **/
 
-    public function store(StoreRequest $request) {
+  public function store(StoreRequest $request) {
     $store = $request->all();
     $this->model::create($store);
     $userSchema = User::first();
     Notification::send($userSchema, new DataStoreNotification($store));
+    event(new \App\Events\NotificationEvent($this->model::get()->count()));
     return redirect($this->url)->with('success', trans('default.notification.success.item-created'));
 
   }

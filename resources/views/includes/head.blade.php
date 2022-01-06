@@ -25,7 +25,7 @@
   channel.bind('my-event', function(data){
     target = data.id;
     value = data.message;
-    document.getElementById('text1').value = value;
+    document.getElementById('text1').innerHTML = value;
   });
   </script>
   @stack('head')
