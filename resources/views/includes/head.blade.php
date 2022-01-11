@@ -14,19 +14,5 @@
   <link href="/assets/backend/css/themes/layout/header/menu/light.css?v=7.0.5" rel="stylesheet" type="text/css">
   <link href="/assets/backend/css/themes/layout/brand/dark.css?v=7.0.5" rel="stylesheet" type="text/css">
   <link href="/assets/backend/css/themes/layout/aside/dark.css?v=7.0.5" rel="stylesheet" type="text/css">
-  <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-  <script>
-
-  Pusher.logToConsole = true;
-
-  var pusher = new Pusher('748fa3ef274df9e61cd4', { cluster: 'ap1' });
-  var channel = pusher.subscribe('my-channel');
-
-  channel.bind('my-event', function(data){
-    target = data.id;
-    value = data.message;
-    document.getElementById('text1').innerHTML = value;
-  });
-  </script>
   @stack('head')
 </head>

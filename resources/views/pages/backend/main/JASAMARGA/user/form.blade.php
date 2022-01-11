@@ -1,5 +1,5 @@
 <div class="form-group row">
-  <label class="col-lg-3 col-form-label"> Device </label>
+  <label class="col-lg-3 col-form-label"> <a href="{{ URL::Current() }}/../../devices/create" target="_blank"><i class="icon-sm fas fa-plus"></i></a> Device </label>
   <div class="col-lg-9">
     {!! Form::select('id_device', jasamarga_devices(), (isset($data->id_device) ? $data->id_device : NULL), ['placeholder' => '- Select Device -', 'class' => 'form-control', 'required' => 'required']) !!}
     @error('id_device') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
@@ -7,7 +7,7 @@
 </div>
 
 <div class="form-group row">
-  <label class="col-lg-3 col-form-label"> Division </label>
+  <label class="col-lg-3 col-form-label"> <a href="{{ URL::Current() }}/../../divisions/create" target="_blank"><i class="icon-sm fas fa-plus"></i></a> Division </label>
   <div class="col-lg-9">
     {!! Form::select('id_division', jasamarga_divisions(), (isset($data->id_division) ? $data->id_division : NULL), ['placeholder' => '- Select Division -', 'class' => 'form-control', 'required' => 'required']) !!}
     @error('id_division') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
@@ -57,7 +57,7 @@
 <div class="form-group row">
   <label class="col-lg-3 col-form-label"> Printer </label>
   <div class="col-lg-9">
-    {{ Form::select('printer', ['1' => 'Yes', '2' => 'No'], (isset($data->printer) ? $data->printer : '2'), ['class' => $errors->has('printer') ? 'form-control is-invalid' : 'form-control', 'required' => 'required']) }}
+    {!! Form::text('printer', (isset($data->printer) ? $data->printer : ''), ['class' => $errors->has('printer') ? 'form-control is-invalid' : 'form-control']) !!}
     @error('printer') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
   </div>
 </div>

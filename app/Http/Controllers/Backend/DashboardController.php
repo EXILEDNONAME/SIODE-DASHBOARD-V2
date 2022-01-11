@@ -56,6 +56,11 @@ class DashboardController extends Controller {
   **************************************************
   **/
 
+  public function notification_all() {
+    $data = Notification::get('data');
+    return Response::json($data);
+  }
+
   public function notification_read($id) {
     $data = Notification::where('id', $id)->update([ 'read_at' => \Carbon\Carbon::now() ]);
     return Response::json($data);

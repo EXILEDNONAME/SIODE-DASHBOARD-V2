@@ -12,6 +12,7 @@ class CreateJasamargaUsersTable extends Migration {
       $table->integer('id_division')->unsigned();
       $table->string('name');
       $table->integer('npp')->nullable();
+      $table->string('ip_address')->nullable();
       $table->string('mac_address')->nullable();
       $table->string('pc_name')->nullable();
       $table->string('pc_password')->nullable();
@@ -19,8 +20,9 @@ class CreateJasamargaUsersTable extends Migration {
       $table->string('specification_processor')->nullable();
       $table->string('specification_harddisk')->nullable();
       $table->string('specification_memory')->nullable();
-      $table->string('printer');
-      $table->string('connection');
+      $table->string('printer')->nullable();
+      $table->integer('connection')->nullable();
+      $table->integer('maintenance')->nullable();
       $table->text('description')->nullable();
       $table->integer('active')->default(1);
       $table->integer('sort')->default(1);

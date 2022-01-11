@@ -13,9 +13,6 @@ use Spatie\Activitylog\Models\Activity;
 use App\Http\Requests\Backend\Main\JASAMARGA\Device\StoreRequest;
 use App\Http\Requests\Backend\Main\JASAMARGA\Device\UpdateRequest;
 
-use Notification;
-use App\Notifications\DataStoreNotification;
-
 class DeviceController extends Controller {
 
   /**
@@ -83,8 +80,6 @@ class DeviceController extends Controller {
     public function store(StoreRequest $request) {
     $store = $request->all();
     $this->model::create($store);
-    $userSchema = User::first();
-    Notification::send($userSchema, new DataStoreNotification($store));
     return redirect($this->url)->with('success', trans('default.notification.success.item-created'));
 
   }

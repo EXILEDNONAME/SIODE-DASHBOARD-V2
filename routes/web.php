@@ -13,7 +13,8 @@ Route::get('test-pusher', function () {
 });
 
 // DUMMY - TABLE GENERALS
-Route::get('/dashboard/notification/read/{id}', 'Backend\DashboardController@notification_read')->name('enable');
+Route::get('/dashboard/notification/read/{id}', 'Backend\DashboardController@notification_read')->name('notification-read');
+Route::get('/dashboard/notification/all', 'Backend\DashboardController@notification_all')->name('notification-all');
 Route::get('/send-notification', [NotificationController::class, 'sendOfferNotification']);
 
 

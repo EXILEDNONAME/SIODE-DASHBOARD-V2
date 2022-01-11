@@ -1,6 +1,7 @@
 - X - Page Not Found [EDIT]
 - Edit Count & Refresh Notification Ajax Pusher
 - Mark as Read Link Ajax Pusher
+- Dashboard (JM Front) * Jumlah Printer, Jumlah Perawatan, Jumlah User, Last Updated
 
 - [CHECK] * Create Multiple Middleware
 - [CHECK] * Page Documentation
