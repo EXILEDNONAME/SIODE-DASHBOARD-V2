@@ -18,7 +18,7 @@ class CreateJasamargaUsersTable extends Migration {
       $table->string('pc_password')->nullable();
       $table->string('specification_os')->nullable();
       $table->string('specification_processor')->nullable();
-      $table->string('specification_harddisk')->nullable();
+      $table->string('specification_storage')->nullable();
       $table->string('specification_memory')->nullable();
       $table->string('printer')->nullable();
       $table->integer('connection')->nullable();

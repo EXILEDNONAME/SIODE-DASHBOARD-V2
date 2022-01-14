@@ -6,14 +6,14 @@
     @endif
   </td>
 </tr>
-<tr>
+<!-- <tr>
   <td width="50%" class="align-middle font-weight-bold"> Sort </td>
   <td class="align-middle"> {!! $data->sort !!} </td>
-</tr>
+</tr> -->
 <tr>
   <td class="align-middle font-weight-bold"> Status </td>
   <td class="align-middle">
-    @if ( $data->status == 1 ) Done
+    @if ( $data->status == 1 ) Success
     @else Pending
     @endif
   </td>

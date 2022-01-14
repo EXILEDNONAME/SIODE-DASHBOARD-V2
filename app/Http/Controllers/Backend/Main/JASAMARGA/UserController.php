@@ -45,6 +45,19 @@ class UserController extends Controller {
       return DataTables::of($this->data)
       ->editColumn('id_devices', function($order) { return $order->jasamarga_devices->name; })
       ->editColumn('id_divisions', function($order) { return $order->jasamarga_divisions->name; })
+      ->editColumn('progress', function($order) {
+        if ( $order->name != NULL ) { $progress = 1; }
+        if ( $order->npp != NULL ) { $progress += 1; }
+        if ( $order->mac_address != NULL ) { $progress += 1; }
+        if ( $order->pc_name != NULL ) { $progress += 1; }
+        if ( $order->pc_password != NULL ) { $progress += 1; }
+        if ( $order->specification_os != NULL ) { $progress += 1; }
+        if ( $order->specification_processor != NULL ) { $progress += 1; }
+        if ( $order->specification_harddisk != NULL ) { $progress += 1; }
+        if ( $order->specification_memory != NULL ) { $progress += 1; }
+        if ( $order->printer != NULL ) { $progress += 1; }
+        return round( (($progress/10) *100 ), 2);
+      })
       ->rawColumns(['description'])
       ->addIndexColumn()
       ->make(true);

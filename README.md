@@ -1,4 +1,6 @@
 - X - Page Not Found [EDIT]
+- Filter Device, Division & Printer
+
 - Edit Count & Refresh Notification Ajax Pusher
 - Mark as Read Link Ajax Pusher
 - Dashboard (JM Front) * Jumlah Printer, Jumlah Perawatan, Jumlah User, Last Updated

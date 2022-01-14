@@ -6,13 +6,13 @@
   </div>
 </div>
 
-<div class="form-group row">
+<!-- <div class="form-group row">
   <label class="col-lg-3 col-form-label"> Sort </label>
   <div class="col-lg-9">
     {!! Form::number('sort', (isset($data->sort) ? $data->sort : $model::count() + 1), ['class' => $errors->has('sort') ? 'form-control is-invalid' : 'form-control', 'required' => 'required']) !!}
     @error('sort') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
   </div>
-</div>
+</div> -->
 
 @if ( !empty($status) && $status == 'true')
 <div class="form-group row">

@@ -292,7 +292,7 @@ var KTDatatablesExtensionsKeytable = function() {
         },
         @if ( !empty($status) && $status == 'true')
         {
-          data: 'status', orderable: true, 'className': 'align-middle', 'width': '1',
+          data: 'status', orderable: false, 'className': 'align-middle', 'width': '1',
           render: function ( data, type, row ) {
             if ( data == 1 ) { return '<a href="javascript:void(0);" id="status_pending" data-toggle="tooltip" data-original-title="Success" data-id="' + row.id + '"><span class="label label-outline-success label-pill label-inline"> {{ trans("default.label.success") }} </span></a>'; }
             if ( data == 2 ) { return '<a href="javascript:void(0);" id="status_done" data-toggle="tooltip" data-original-title="Pending" data-id="' + row.id + '"><span class="label label-outline-warning label-pill label-inline"> {{ trans("default.label.pending") }} </span></a>'; }
