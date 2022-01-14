@@ -80,71 +80,59 @@ $('.filter-jasamarga-divisions').change(function () {
 @endpush
 
 @push('widget')
-<div class="row">
-
-  <div class="col-xl-3">
-    <div class="card card-custom wave wave-animate-slow wave-primary gutter-b" data-card="true" id="kt_card_3">
-      <div class="card-header">
-        <div class="card-title">
-          <h3 class="card-label"> Users </h3>
+<div class="table-responsive">
+  <table width="100%" class="table table-striped-table-bordered">
+    <tr class="text-nowrap">
+      <td>
+        <div class="card card-custom wave wave-animate-slow wave-primary gutter-b" data-card="true" id="kt_card_3">
+          <div class="card-header">
+            <div class="card-title">
+              <h4 class="card-label"> Total Users </h4>
+            </div>
+            <div class="card-toolbar">
+              <b><a href="javascript:;"><span class="text-danger"> {{ \DB::table('jasamarga_users')->where('active', '1')->get()->count() }} </span></a></b>
+            </div>
+          </div>
         </div>
-        <div class="card-toolbar">
-          <a class="btn btn-sm btn-icon btn-clean btn-light-md" data-card-tool="toggle"><i class="fas fa-caret-down"></i></a>
+      </td>
+      <td>
+        <div class="card card-custom wave wave-animate-slow wave-danger gutter-b" data-card="true" id="kt_card_3">
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label"> Total Printers </h3>
+            </div>
+            <div class="card-toolbar">
+              <b><a href="javascript:;"><span class="text-danger"> {{ \DB::table('jasamarga_users')->where('printer', '!=', 'null')->where('active', 1)->get()->count() }} </span></a></b>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card-body">
-        {{ \DB::table('jasamarga_users')->where('active', '1')->get()->count() }}
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xl-3">
-    <div class="card card-custom wave wave-animate-slow wave-danger gutter-b" data-card="true" id="kt_card_3">
-      <div class="card-header">
-        <div class="card-title">
-          <h3 class="card-label"> Total Printers </h3>
+      </td>
+      <td>
+        <div class="card card-custom wave wave-animate-slow wave-warning gutter-b" data-card="true" id="kt_card_3">
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label"> Maintenance Data </h3>
+            </div>
+            <div class="card-toolbar">
+              <b><a href="javascript:;"><span class="text-danger"> {{ \DB::table('jasamarga_users')->where('maintenance', '!=', 'null')->where('active', 1)->get()->count() }} </span></a></b>
+            </div>
+          </div>
         </div>
-        <div class="card-toolbar">
-          <a class="btn btn-sm btn-icon btn-clean btn-light-md" data-card-tool="toggle"><i class="fas fa-caret-down"></i></a>
-        </div>
-      </div>
-      <div class="card-body">
-        {{ \DB::table('jasamarga_users')->where('printer', '!=', 'null')->where('active', 1)->get()->count() }}
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xl-3">
-    <div class="card card-custom gutter-b" data-card="true" id="kt_card_3">
-      <div class="card-header">
-        <div class="card-title">
-          <h3 class="card-label"> Maintenance Data </h3>
-        </div>
-        <div class="card-toolbar">
-          <a class="btn btn-sm btn-icon btn-clean btn-light-md" data-card-tool="toggle"><i class="fas fa-caret-down"></i></a>
-        </div>
-      </div>
-      <div class="card-body">
-        {{ \DB::table('jasamarga_users')->where('maintenance', '!=', 'null')->where('active', 1)->get()->count() }}
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xl-3">
-    <div class="card card-custom gutter-b" data-card="true" id="kt_card_3">
-      <div class="card-header">
-        <div class="card-title">
-          <h3 class="card-label"> PC Lenovo  </h3>
-        </div>
-        <div class="card-toolbar">
-          <a class="btn btn-sm btn-icon btn-clean btn-light-md" data-card-tool="toggle"><i class="fas fa-caret-down"></i></a>
+      </td>
+      <td>
+        <div class="card card-custom wave wave-animate-slow wave-dark gutter-b" data-card="true" id="kt_card_3">
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label"> PC Lenovo  </h3>
+            </div>
+            <div class="card-toolbar">
+              <b><a href="javascript:;"><span class="text-danger"> {{ \DB::table('jasamarga_users')->where('maintenance', '!=', 'null')->where('active', 1)->get()->count() }} </span></a></b>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card-body">
-        TEST 2
-      </div>
-    </div>
-  </div>
-
+      </td>
+    </tr>
+  </table>
 </div>
 @endpush
