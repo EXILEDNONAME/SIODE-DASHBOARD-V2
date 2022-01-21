@@ -9,7 +9,7 @@
           <h3 class="card-label"> {{ trans('default.page.create') }} </h3>
         </div>
         <div class="card-toolbar">
-          <a href="{{ URL::previous() }}" class="btn btn-outline-primary font-weight-bolder mr-2">
+          <a href="{{ URL::Current() }}/.." class="btn btn-outline-primary font-weight-bolder mr-2">
             <i class="ki ki-long-arrow-back icon-xs"></i>
             Back
           </a>

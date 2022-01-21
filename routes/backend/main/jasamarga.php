@@ -1,5 +1,21 @@
 <?php
 
+// JASAMARGA - ACTIVITIES
+Route::group([
+  'as' => 'main.jasamarga.activities.',
+  'prefix' => 'dashboard/jasamarga/activities',
+  'namespace' => 'Backend\Main\JASAMARGA',
+], function(){
+  Route::get('status-done/{id}', 'ActivityController@status_done')->name('status-done');
+  Route::get('status-pending/{id}', 'ActivityController@status_pending')->name('status-pending');
+  Route::get('enable/{id}', 'ActivityController@enable')->name('enable');
+  Route::get('disable/{id}', 'ActivityController@disable')->name('disable');
+  Route::get('status/{id}/{slug}', 'ActivityController@status')->name('status');
+  Route::get('delete/{id}', 'ActivityController@delete')->name('delete');
+  Route::get('deleteall', 'ActivityController@deleteall')->name('deleteall');
+  Route::resource('/', 'ActivityController')->parameters(['' => 'id']);
+});
+
 // JASAMARGA - DEVICES
 Route::group([
   'as' => 'main.jasamarga.devices.',
@@ -30,6 +46,22 @@ Route::group([
   Route::get('delete/{id}', 'DivisionController@delete')->name('delete');
   Route::get('deleteall', 'DivisionController@deleteall')->name('deleteall');
   Route::resource('/', 'DivisionController')->parameters(['' => 'id']);
+});
+
+// JASAMARGA - INTERCOMES
+Route::group([
+  'as' => 'main.jasamarga.intercomes.',
+  'prefix' => 'dashboard/jasamarga/intercomes',
+  'namespace' => 'Backend\Main\JASAMARGA',
+], function(){
+  Route::get('status-done/{id}', 'IntercomeController@status_done')->name('status-done');
+  Route::get('status-pending/{id}', 'IntercomeController@status_pending')->name('status-pending');
+  Route::get('enable/{id}', 'IntercomeController@enable')->name('enable');
+  Route::get('disable/{id}', 'IntercomeController@disable')->name('disable');
+  Route::get('status/{id}/{slug}', 'IntercomeController@status')->name('status');
+  Route::get('delete/{id}', 'IntercomeController@delete')->name('delete');
+  Route::get('deleteall', 'IntercomeController@deleteall')->name('deleteall');
+  Route::resource('/', 'IntercomeController')->parameters(['' => 'id']);
 });
 
 // JASAMARGA - USERS

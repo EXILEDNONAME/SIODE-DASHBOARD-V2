@@ -20,7 +20,8 @@ class CreateJasamargaUsersTable extends Migration {
       $table->string('specification_processor')->nullable();
       $table->string('specification_storage')->nullable();
       $table->string('specification_memory')->nullable();
-      $table->string('printer')->nullable();
+      $table->integer('printer')->nullable()->default('0');
+      $table->string('model_printer')->nullable();
       $table->integer('connection')->nullable();
       $table->integer('maintenance')->nullable();
       $table->text('description')->nullable();

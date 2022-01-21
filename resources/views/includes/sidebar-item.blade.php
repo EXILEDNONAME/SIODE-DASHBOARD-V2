@@ -12,16 +12,22 @@
   <div class="menu-submenu">
     <i class="menu-arrow"></i>
     <ul class="menu-subnav">
-      <li class="menu-item {{ (request()->is('dashboard/jasamarga/devices*')) ? 'menu-item-active' : '' }}">
-        <a href="/dashboard/jasamarga/devices" class="menu-link">
+      <li class="menu-item {{ (request()->is('dashboard/jasamarga/activities*')) ? 'menu-item-active' : '' }}">
+        <a href="/dashboard/jasamarga/activities" class="menu-link">
           <i class="menu-bullet menu-bullet-line"><span></span></i>
-          <span class="menu-text"> Devices </span>
+          <span class="menu-text"> Activities </span>
         </a>
       </li>
-      <li class="menu-item {{ (request()->is('dashboard/jasamarga/divisions*')) ? 'menu-item-active' : '' }}">
-        <a href="/dashboard/jasamarga/divisions" class="menu-link">
+      <li class="menu-item {{ (request()->is('dashboard/jasamarga/intercomes*')) ? 'menu-item-active' : '' }}">
+        <a href="/dashboard/jasamarga/intercomes" class="menu-link">
           <i class="menu-bullet menu-bullet-line"><span></span></i>
-          <span class="menu-text"> Divisions </span>
+          <span class="menu-text"> Intercomes </span>
+        </a>
+      </li>
+      <li class="menu-item {{ (request()->is('dashboard/jasamarga/monitorings*')) ? 'menu-item-active' : '' }}">
+        <a href="/dashboard/jasamarga/monitorings" class="menu-link">
+          <i class="menu-bullet menu-bullet-line"><span></span></i>
+          <span class="menu-text"> Monitorings </span>
         </a>
       </li>
       <li class="menu-item {{ (request()->is('dashboard/jasamarga/users*')) ? 'menu-item-active' : '' }}">
